@@ -3,10 +3,13 @@ services:
     name: shl-recommender
     runtime: python
     plan: free
+    PYTHON_VERSION: 3.11.4
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: GEMINI_API_KEY
         value: AIzaSyB1uJXLP7nIcjSnW1QzdaIKUA53aFEoE5A    # Render deployment key
+      - key: PYTHON_VERSION
+        value: 3.11.4
     healthCheckPath: /health
     autoDeploy: true
