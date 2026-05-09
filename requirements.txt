@@ -2,8 +2,6 @@ fastapi==0.111.0
 uvicorn[standard]==0.29.0
 pydantic==2.7.4
 google-generativeai==0.7.2
-sentence-transformers==3.0.1
-faiss-cpu==1.13.2
 numpy<2.0.0
 
 # Scraper only (not needed for the deployed API)
